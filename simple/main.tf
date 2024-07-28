@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = base64decode(var.google_credentials)
+  credentials = base64decode(var.GOOGLE_CREDENTIALS)
   project     = var.project
   region      = var.region
 }
@@ -9,7 +9,7 @@ resource "google_compute_network" "vpc_network" {
   auto_create_subnetworks = true
 }
 
-variable "google_credentials" {
+variable "GOOGLE_CREDENTIALS" {
   description = "Base64-encoded contents of the service account JSON key file"
   type        = string
 }
