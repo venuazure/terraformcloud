@@ -1,3 +1,4 @@
+/*
 terraform {
   required_providers {
     google = {
@@ -5,7 +6,7 @@ terraform {
       version = "5.38.0"
     }
   }
-}
+}*/
 
 resource "google_compute_network" "vpc_network" {
   name                    = var.vpc_network_name
