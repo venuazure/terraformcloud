@@ -1,7 +1,10 @@
-provider "google" {
-  // credentials = base64decode(var.GOOGLE_CREDENTIALS)
-  project = var.project
-  region  = var.region
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "5.38.0"
+    }
+  }
 }
 
 resource "google_compute_network" "vpc_network" {
