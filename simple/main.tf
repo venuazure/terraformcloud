@@ -9,7 +9,7 @@ terraform {
 }*/
 
 provider "google" {
-  credentials = var.GOOGLE_CREDENTIALS
+  credentials = var.google_credentials
 
 }
 resource "google_compute_network" "vpc_network" {
@@ -18,7 +18,7 @@ resource "google_compute_network" "vpc_network" {
   auto_create_subnetworks = true
 }
 
-variable "GOOGLE_CREDENTIALS" {
+variable "google_credentials" {
   description = "Base64-encoded contents of the service account JSON key file"
   type        = string
 }
