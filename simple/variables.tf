@@ -8,5 +8,10 @@ variable "google_project" {
 
 variable "google_region" {
   description = "Google Cloud region"
-  default     = "us-central1"  # or your preferred default region
+  default     = "us-central1" # or your preferred default region
+}
+
+variable "auto_create_subnetworks" {
+  type = bool
+
 }
